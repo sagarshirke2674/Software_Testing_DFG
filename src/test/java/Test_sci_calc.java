@@ -11,6 +11,9 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class Test_sci_calc {
 
+    int[] arr1={};
+    int[] arr2={1};
+    int[] arr3={1,2,3,4};
     Calc calculator;
     Menus menus;
 
@@ -108,6 +111,26 @@ public class Test_sci_calc {
     public void testDecToOctal3()
     {
         assertEquals("244",calculator.decimalToOctal(164));
+    }
+
+    @Test
+    @DisplayName("addArrElements()=>follows path [1,2,3,5,6]")
+    public void testArrAdd1() {
+        assertEquals(0, calculator.addArrElements(arr1));
+    }
+
+    @Test
+    @DisplayName("addArrElements()=>follows path [1,2,3,4,3,5,6]")
+    public void testArrAdd2()
+    {
+        assertEquals(1,calculator.addArrElements(arr2));
+    }
+
+    @Test
+    @DisplayName("addArrElements()=>follows path [1,2,3,4,3,4,3,5,6]")
+    public void testArrAdd3()
+    {
+        assertEquals(10,calculator.addArrElements(arr3));
     }
 
 }

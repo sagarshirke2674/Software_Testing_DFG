@@ -13,14 +13,14 @@ class Calc {
 
 
     //Addition of array elements
-//    public double add(int arr[]) {
-//        double sum = 0;
-//        for(int i=0;i<arr.length;i++)
-//        {
-//            sum += arr[i];
-//        }
-//        return sum;
-//    }
+    public double addArrElements(int arr[]) {
+        double total = 0;
+        for(int i=0;i<arr.length;i++)
+        {
+            total += arr[i];
+        }
+        return total;
+    }
 
     //Subtraction of two numbers
     public double subtract(double a, double b) {
@@ -513,6 +513,8 @@ class Menus {
     public void performBAriOps() {
         int choice;
         double a, b;
+        int n;
+        int[] array=new int[100];
 
         while(true) {
             System.out.println("\n1. Addition.");
@@ -523,6 +525,7 @@ class Menus {
             System.out.println("6. Square.");
             System.out.println("7. Square root.");
             System.out.println("8. Multiplicative Inverse.");
+            System.out.println("9. Array addition.");
             System.out.println("0. Exit.");
             System.out.print("Enter your choice : ");
             choice = input.nextInt();
@@ -588,6 +591,16 @@ class Menus {
                     System.out.print("\nEnter a number : ");
                     a = input.nextDouble();
                     System.out.println("Output (1 / a) : " + cal.multiInverse(a));
+                    break;
+                case 9:
+                    System.out.print("\nEnter the number of elements you want to store: ");
+                    n = input.nextInt();
+                    System.out.print("\nEnter the elements of array:");
+                    for(int i=0;i<n;i++)
+                    {
+                        array[i]=input.nextInt();
+                    }
+                    System.out.println("Sum of array elements is : " + cal.addArrElements(array));
                     break;
             }
         }
