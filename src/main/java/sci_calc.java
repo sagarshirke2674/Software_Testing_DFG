@@ -120,7 +120,7 @@ class Calc {
 
 
     //Power (x raised to y)
-    public double power(double x, int y) {
+    public double pow(double x, int y) {
         double ans = 1;
         long absN = Math.abs((long)y);
         while(absN > 0) {
@@ -212,19 +212,19 @@ class Calc {
 
 
     //Integer to Roman
-    public String intToRoman(int num) {
-        int[] values = {1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1};
-        String[] strs = {"M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"};
+    public String integerToRoman(int num) {
+        int[] val = {1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1};
+        String[] str = {"M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"};
 
-        StringBuilder sb = new StringBuilder();
+        StringBuilder sbuilder = new StringBuilder();
 
-        for(int i=0;i<values.length;i++) {
-            while(num >= values[i]) {
-                num -= values[i];
-                sb.append(strs[i]);
+        for(int i=0;i<val.length;i++) {
+            while(num >= val[i]) {
+                num -= val[i];
+                sbuilder.append(str[i]);
             }
         }
-        return sb.toString();
+        return sbuilder.toString();
     }
 
 
@@ -252,7 +252,7 @@ class Calc {
         {
             if(sb.charAt(i)=='1')
             {
-                num+=power(2,i);
+                num+=pow(2,i);
             }
         }
         return num;
@@ -331,7 +331,7 @@ class Calc {
         int num = 0;
         for(int i=0;i<sb.length();i++)
         {
-            num+=power(16,i)*str.indexOf(sb.charAt(i));
+            num+=pow(16,i)*str.indexOf(sb.charAt(i));
         }
         return num;
     }
@@ -392,7 +392,7 @@ class Calc {
         int num = 0;
         for(int i=0;i<sb.length();i++)
         {
-            num+=power(8,i)*str.indexOf(sb.charAt(i));
+            num+=pow(8,i)*str.indexOf(sb.charAt(i));
         }
         return num;
     }
@@ -654,7 +654,7 @@ class Menus {
                     c = input.nextDouble();
                     System.out.print("Enter another number : ");
                     n = input.nextInt();
-                    System.out.println("Output (nCr) : " + cal.power(c, n));
+                    System.out.println("Output (nCr) : " + cal.pow(c, n));
                     break;
                 default:
                     System.out.println("Wrong input!!!");
@@ -700,7 +700,7 @@ class Menus {
                 case 2:
                     System.out.print("\nEnter a number : ");
                     a = input.nextInt();
-                    System.out.println("Output (Integer to Roman) : " + cal.intToRoman(a));
+                    System.out.println("Output (Integer to Roman) : " + cal.integerToRoman(a));
                     break;
                 // Decimal to Binary
                 case 3:
