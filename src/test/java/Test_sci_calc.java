@@ -39,4 +39,26 @@ public class Test_sci_calc {
     {
         assertEquals(120,calculator.fact(5));
     }
+
+    @Test
+    @DisplayName("binaryToHexa()=>follows path [1,2,7]")
+    public void testBinToHexa1()
+    {
+        assertEquals("",calculator.binaryToHexa(""));
+    }
+
+    @Test
+    @DisplayName("binaryToHexa()=>follows path [1,2,3,4,5,4,6,2,7]")
+    public void testBinToHexa2()
+    {
+        assertEquals("1",calculator.binaryToHexa("1"));
+    }
+
+    @Test
+    @DisplayName("binaryToHexa()=>follows path [1,2,3,4,5,4,5,4,6,2,7]")
+    public void testBinToHexa3()
+    {
+        assertEquals("2",calculator.binaryToHexa("10"));
+    }
+
 }
