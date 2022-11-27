@@ -89,4 +89,25 @@ public class Test_sci_calc {
         assertEquals(0.125,calculator.pow(2,-3));
     }
 
+    @Test
+    @DisplayName("decimalToOctal()=>follows path [1,2,4]")
+    public void testDecToOctal1()
+    {
+        assertEquals("7",calculator.decimalToOctal(7));
+    }
+
+    @Test
+    @DisplayName("decimalToOctal()=>follows path [1,2,3,2,4]")
+    public void testDecToOctal2()
+    {
+        assertEquals("12",calculator.decimalToOctal(10));
+    }
+
+    @Test
+    @DisplayName("decimalToOctal()=>follows path [1,2,3,2,3,2,4]")
+    public void testDecToOctal3()
+    {
+        assertEquals("244",calculator.decimalToOctal(164));
+    }
+
 }

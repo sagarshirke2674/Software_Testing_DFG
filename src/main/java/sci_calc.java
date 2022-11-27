@@ -400,17 +400,17 @@ class Calc {
 
     //Decimal To Octal Conversion
     public String decimalToOctal(int num) {
-        String str = "01234567";
-        StringBuilder sb = new StringBuilder();
+        String s = "01234567";
+        StringBuilder sbuilder = new StringBuilder();
         while(num>=8)
         {
             int reminder = num%8;
-            sb.append(str.charAt(reminder));
+            sbuilder.append(s.charAt(reminder));
             num=num/8;
         }
-        sb.append(str.charAt(num));
-        sb.reverse();
-        return sb.toString();
+        sbuilder.append(s.charAt(num));
+        sbuilder.reverse();
+        return sbuilder.toString();
     }
 
 
