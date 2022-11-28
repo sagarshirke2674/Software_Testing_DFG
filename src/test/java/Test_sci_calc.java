@@ -72,21 +72,21 @@ public class Test_sci_calc {
     }
 
     @Test
-    @DisplayName("power()=>follows path [1,2,3,10,5,6,2,4,7,8]")
+    @DisplayName("pow()=>follows path [1,2,3,10,5,6,2,4,7,8]")
     public void testPower2()
     {
         assertEquals(0.5,calculator.pow(2,-1));
     }
 
     @Test
-    @DisplayName("power()=>follows path [1,2,3,10,5,6,2,4,7,9]")
+    @DisplayName("pow()=>follows path [1,2,3,10,5,6,2,4,7,9]")
     public void testPower3()
     {
         assertEquals(2,calculator.pow(2,1));
     }
 
     @Test
-    @DisplayName("power()=>follows path [1,2,3,10,5,6,2,3,10,5,6,2,4,7,8]")
+    @DisplayName("pow()=>follows path [1,2,3,10,5,6,2,3,10,5,6,2,4,7,8]")
     public void testPower4()
     {
         assertEquals(0.125,calculator.pow(2,-3));
